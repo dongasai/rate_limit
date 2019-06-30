@@ -1,9 +1,10 @@
 {
-    "name": "dongasai/limit",
+    "name": "xsdys/limit",
     "description": "一个限流组件,支持自然周期和非自然周期",
     "type": "library",
     "require": {
-        "nesbot/carbon": "^1.38.14"
+        "nesbot/carbon": "^1.38.14",
+        "predis/predis": "^1.1.1"
     },
     "license": "MIT",
     "authors": [
