@@ -1,0 +1,15 @@
+{
+    "name": "dongasai/limit",
+    "description": "一个限流组件,支持自然周期和非自然周期",
+    "type": "library",
+    "require": {
+        "nesbot/carbon": "^1.38.14"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dongasai",
+            "email": "1514582970@qq.com"
+        }
+    ]
+}
