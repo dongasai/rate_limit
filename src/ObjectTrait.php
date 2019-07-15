@@ -6,9 +6,6 @@ namespace limit;
 
 trait ObjectTrait
 {
-
-
-
     /**
      * 获取数据使用量
      * @return string
