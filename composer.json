@@ -11,7 +11,7 @@
         "psr-4": {
             "limit\\": "src/"
         }
-    }
+    },
     "authors": [
         {
             "name": "dongasai",
