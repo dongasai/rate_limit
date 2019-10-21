@@ -7,6 +7,11 @@
         "predis/predis": "^1.1.1"
     },
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "limit\\": "src/"
+        }
+    }
     "authors": [
         {
             "name": "dongasai",
