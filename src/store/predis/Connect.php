@@ -23,11 +23,17 @@ class Connect
     {
         $defalut = [
             'scheme' => 'tcp',
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
+            'host' =>  '127.0.0.1',
+            'password' =>  null,
+            'port' =>  6379,
+            'database' =>  0,
+            'option'=>[
+                'prefix'=>'limit'
+            ]
         ];
-        $this->client = new \Predis\Client(array_merge($defalut, $config));
+        $c = array_merge($defalut, $config);
+       
+        $this->client = new \Predis\Client($c,$config['option']??[]);
 
     }
 

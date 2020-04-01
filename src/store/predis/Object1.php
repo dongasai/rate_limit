@@ -11,11 +11,11 @@ use limit\Limit;
 
 /**
  * 对象
- * Class Object
+ * Class Object1
  * @package limit\data
  * @property-read Limit $limit
  */
-class Object implements \ArrayAccess, ObjectInterface
+class Object1 implements \ArrayAccess, ObjectInterface
 {
     use ObjectTrait, ObjectArray;
 

@@ -3,7 +3,7 @@
 namespace limit\store;
 
 use limit\Limit;
-use limit\store\predis\Object;
+
 
 /**
  * Predis 的数据库储存驱动
@@ -15,6 +15,12 @@ class Predis
 
     protected $dataob; # 数据对象
     private $limit;
+
+    public function __construct($config)
+    {
+        predis\Connect::getInstance($config); 
+    }
+
 
     /**
      * 获取数据, 不存在则初始化
@@ -41,7 +47,7 @@ class Predis
             $this->dataob = $limitobject;
         } else {
             # 新建对象
-            $limitobject = new predis\Object([
+            $limitobject = new predis\Object1([
                 'xiane' => $limit,
                 'app_id' => $app,
                 'create_time' => time(),
@@ -72,18 +78,16 @@ class Predis
     {
 
         if (!$natural) {
-            $object = predis\Object::getLast($app, $cycle);
+            $object = predis\Object1::getLast($app, $cycle);
 
             if ($object) {
-
                 if($object->cycle_date >= $this->limit->cycle_start_define){
-
                     return $object;
                 }
             }
             return null;
         } else {
-            return predis\Object::get($app, $cycle_date, $cycle);
+            return predis\Object1::get($app, $cycle_date, $cycle);
         }
     }
 
